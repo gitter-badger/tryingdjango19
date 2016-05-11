@@ -20,5 +20,6 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # url(r'^posts/$', p_v.post_home),
-    url(r'^posts/', include("posts.urls")),
+    # namespace is used for set of urls
+    url(r'^posts/', include("posts.urls", namespace='posts')),
 ]

@@ -1,5 +1,12 @@
 <html>
 <body>
-    <h1>Hello World</h1>
+    <h1>Hello {{ title }}</h1>
+    <!--{{ object_list }}-->
+    {% for obj in object_list %}
+    <!--<a href='/posts/{{obj.id}}'>{{obj.title}}</a><br/>-->
+    <!--<a href='{% url "posts:detail" id=obj.id %}'>{{obj.title}}</a><br/>-->
+    <a href='{{ obj.get_absolute_url }}'>{{obj.title}}</a><br/>
+    {{obj.contect}}<br/>
+    {% endfor %}
 </body>
 </html>
