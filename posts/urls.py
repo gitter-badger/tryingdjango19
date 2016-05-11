@@ -8,6 +8,7 @@ urlpatterns = [
     # name is used of single reference to url
     url(r'^(?P<id>\d+)/$', v.post_detail, name='detail'),
     url(r'^$', v.post_list),
-    url(r'^update/$', v.post_update),
+    # url(r'^update/$', v.post_update),
+    url(r'^(?P<id>\d+)/edit/$', v.post_update, name='update'),
     url(r'^delete/$', v.post_delete),
 ]
